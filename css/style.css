@@ -55,6 +55,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     height: 100%;
     top: 0;
     left: 0;
+    will-change: transform;
 }
 .parallax__background {
     background: url('../img/compressed/background.jpg') 0 0 / cover no-repeat;
@@ -62,24 +63,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .parallax__snow-main {
     background: url('../img/compressed/snow-main.png') bottom right / 100% no-repeat;
     z-index: 1;
-
 }
 .parallax__tree {
     background: url('../img/compressed/tree.png') no-repeat;
     background-size: 30%;
     background-position-x: 0%;
     background-position-y: 100%;
-
     z-index: 2;
 }
-
 
 .parallax__snow-near-tree {
     background: url('../img/compressed/snow-near-tree.png') no-repeat;
     background-size: 40%;
     background-position-x: 0%;
     background-position-y: 100%;
-
     z-index: 2;
 }
 
@@ -105,6 +102,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     left: 0;
     z-index: 2;
     animation: snow 20s linear infinite;
+    will-change: transform, opacity;
 }
 .parallax__snowfall-second{
     background: url('../img/compressed/snowflakes-1.png'), url('../img/compressed/snowflakes-3.png');
@@ -115,6 +113,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     left: 0;
     z-index: 2;
     animation: snow 20s linear infinite;
+    will-change: transform, opacity;
 }
 
 @media (max-width: 1170px){
