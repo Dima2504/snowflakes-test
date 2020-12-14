@@ -10,15 +10,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		let p = s / h * 100;
 		let p_b = s / h_b * 100;
 		let o = 1 - 1 / 100 * p_b;
-
+		
 
 		let z_1 = 1 + (w / 10000 * p_b);
 		document.querySelector('.parallax__snowfall-first').style.transform = `scale(${z_1})`;
-		document.querySelector('.parallax__snowfall-first').style.opacity = o;
+		document.querySelector('.parallax__snowfall-first').style.opacity = Math.abs(o);
 		
 		z_1 = 1 + (w / 1000000 * p_b);
 		document.querySelector('.parallax__snowfall-second').style.transform = `scale(${z_1})`;
-		document.querySelector('.parallax__snowfall-second').style.opacity = o;
+		document.querySelector('.parallax__snowfall-second').style.opacity = Math.abs(o);
 
 
 		z_1 = 1 + (w / 5000000 * p);
