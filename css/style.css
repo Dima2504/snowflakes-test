@@ -1,0 +1,158 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax {
+    position: relative;
+    height: 100%;
+}
+.parallax__item {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.parallax__background {
+    background: url('../img/compressed/background.jpg') 0 0 / cover no-repeat;
+}
+.parallax__snow-main {
+    background: url('../img/compressed/snow-main.png') bottom right / 100% no-repeat;
+    z-index: 1;
+
+}
+.parallax__tree {
+    background: url('../img/compressed/tree.png') no-repeat;
+    background-size: 30%;
+    background-position-x: 0%;
+    background-position-y: 100%;
+
+    z-index: 2;
+}
+
+
+.parallax__snow-near-tree {
+    background: url('../img/compressed/snow-near-tree.png') no-repeat;
+    background-size: 40%;
+    background-position-x: 0%;
+    background-position-y: 100%;
+
+    z-index: 2;
+}
+
+.parallax__gift{
+    background: url('../img/compressed/gift.png') no-repeat;
+    background-size: 9%;
+    background-position: 35% 98%;
+    z-index: 1;
+}
+.parallax__snowman{
+    background: url('../img/compressed/snowman.png') no-repeat;
+    background-size: 25%;
+    background-position: 90% 100%;
+    z-index: 1;
+}
+
+.parallax__snowfall-first {
+    background: url('../img/compressed/snowflakes-2.png'),  url('../img/compressed/snowflakes-4.png');
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: snow 20s linear infinite;
+}
+.parallax__snowfall-second{
+    background: url('../img/compressed/snowflakes-1.png'), url('../img/compressed/snowflakes-3.png');
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: snow 20s linear infinite;
+}
+
+@media (max-width: 1170px){
+}
+
+@keyframes snow {
+    0% {
+        background-position: 0px 0px, 0px 0px, 0px 0px;
+    }
+    100% {
+        background-position: 500px 1000px, 400px 400px, 300px 300px;
+    }
+}
+
+.content {
+    position: relative;
+}
+.content__body {
+    max-width: 1170px;
+    margin: 0px auto;
+}
+.content__header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.content__title {
+    font-size: 200px;
+
+}
+.content__article {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+    line-height: 24px;
+    font-size: 20px;
+}
+.content__article p{
+    margin-bottom: 20px;
+}
+
