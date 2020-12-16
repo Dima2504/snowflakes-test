@@ -58,6 +58,39 @@ body{
 	overflow: hidden;
 } */
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.label{
+    position: fixed;
+    display: flex;
+    left: calc(100% - 150px);
+    top: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 30px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 4px;
+    z-index: 1;
+    animation: blinking 1s linear infinite;
+}
+@keyframes blinking{
+    0%{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+    50%{
+        background-color:rgba(255, 255, 255, 0);
+        color: rgba(255, 255, 255, 0.5);
+    }
+    100%{
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+    }
+}
+
 .page {
     position: absolute;
     width: 100%;

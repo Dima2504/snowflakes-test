@@ -1,6 +1,8 @@
 let w = window.outerWidth;
 let h = document.querySelector('.content').clientHeight;
 let h_b = document.querySelector('.parallax').clientHeight;
+let label = document.querySelector('.label');
+let labelStartPositionX = parseInt(getComputedStyle(label).left);
 
 document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', function () {
@@ -10,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		let p = s / h * 100;
 		let p_b = s / h_b * 100;
 		let o = 1 - 1 / 100 * p_b;
-		
+
+		label.style.left = (labelStartPositionX + Math.pow(s/100, 3)) +'px';
 
 		let z_1 = 1 + (w / 10000 * p_b);
 		document.querySelector('.parallax__snowfall-first').style.transform = `scale(${z_1})`;
