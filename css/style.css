@@ -225,6 +225,9 @@ body{
 		font-size: 130px;
 	}
 }
+
+
+
 @media (max-width:767px){
 	.content__title{
 		font-size: 50px;
@@ -235,5 +238,17 @@ body{
 	}
 	.content__article p{
 		margin: 0px 0px 10px 0px;
-	}
+    }
+    .parallax__tree{
+        background-size: 35%;
+    }
+    .parallax__gift{
+        background-position: 40% 98%;
+    }
+    .parallax__snowman{
+        background-size: 35%;
+    }
+    .parallax__snow-main{
+
+    }
 }
