@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		let o = 1 - 1 / 100 * p_b;
 
 		label.style.left = (labelStartPositionX + Math.pow(s/100, 3)) +'px';
+		console.log(s);
 
 		let z_1 = 1 + (w / 10000 * p_b);
 		document.querySelector('.parallax__snowfall-first').style.transform = `scale(${z_1})`;
