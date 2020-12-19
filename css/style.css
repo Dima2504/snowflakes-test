@@ -252,3 +252,20 @@ body{
 
     }
 }
+@media (max-width:400px){
+    .parallax__tree{
+        background-size: 70%;
+        background-position-x: -80%;
+    }
+    .parallax__gift{
+        background-size: 15%;
+        background-position: 50% 98%;
+    }
+    .parallax__snowman{
+        background-size: 50%;
+        background-position-x: 130%;
+    }
+    .parallax__snow-main{
+
+    }
+}
