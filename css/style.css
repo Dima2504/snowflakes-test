@@ -179,6 +179,19 @@ body{
     }
 }
 
+.flex-grid{
+    display: flex;
+}
+.col{
+    flex-grow: 1;
+}
+@media (max-width: 400px){
+    .flex-grid{
+        display: block;
+    }
+}
+
+
 .content {
     position: relative;
     margin: 0 10px;
@@ -187,7 +200,7 @@ body{
     max-width: 1170px;
     margin: 0px auto;
 }
-.content__article {
+.content__article, .content__article-message {
     padding: 25px;
     background-color: white;
     line-height: 24px;
@@ -290,3 +303,19 @@ body{
     transform: rotate(4deg);
 }
 
+.content__form{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-form{
+    position: relative;
+    z-index: 5;
+}
+
+.password-form input{
+    border: 2px solid black;
+    
+}
