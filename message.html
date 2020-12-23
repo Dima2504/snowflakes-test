@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="page">
             <div class="content">
                 <div class="content__body">
                     <div class="content__article-message">
-                        <p id="message">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores earum nostrum, deleniti tenetur blanditiis reiciendis, alias harum pariatur voluptate, qui labore ex officiis voluptatum beatae praesentium temporibus fugit iusto eius.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        document.getElementById('message').textContent = localStorage.getItem('data');
+        let main = document.querySelector('.content__article-message');
+        for (let s of localStorage.getItem('data').split('\n')) {
+            let p = document.createElement('p')
+            p.textContent = s;
+            main.append(p);
+        }
         localStorage.clear();
     </script>
 </body>
+
 </html>

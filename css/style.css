@@ -202,6 +202,7 @@ body{
 }
 .content__article, .content__article-message {
     padding: 25px;
+    padding-top: 70px;
     background-color: white;
     line-height: 24px;
     font-size: 18px;
@@ -222,8 +223,8 @@ body{
     transform: rotate(-55deg) scale(1.3);
 }
  */
-.content__article p{
-    margin-top: 40px;
+.content__article p, .content__article-message p{
+    margin-bottom: 40px;
 }
 
 
