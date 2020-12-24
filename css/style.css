@@ -129,7 +129,7 @@ body{
     background-size: 40%;
     background-position-x: 0%;
     background-position-y: 100%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .parallax__gift{
@@ -206,7 +206,7 @@ body{
     font-size: 18px;
     text-align: justify;
     position: relative;
-    border-radius: 5px;
+    border-radius: 0 5px 0 0;
 }
 .content__article::before{
     content: url(../img/compressed/hat.png);
@@ -303,18 +303,37 @@ body{
 }
 
 .content__form{
-    
     display: flex;
     justify-content: center;
-    align-items: center;
 }
-
-.password-form{
+.content__form form{
+    height: 40px;
     position: relative;
-    z-index: 5;
+    z-index: 4;
+    text-align: center;
+}
+.content__form input{
+    border: 1px solid gray;
+    height: 100%;
+    padding: 0 10px;
+}
+.content__form input:focus{
+    border: 2px solid gray;
+}
+.content__form button{
+    height: 100%;
+    padding: 0 10px;
+    background-color: #f1e4e4;
+    color: white;
+    transition: all 1s;
+}
+.content__form button:hover{
+    transform: rotate(720deg);
+    color: black;    
 }
 
-.password-form input{
-    border: 2px solid black;
-    
+
+footer{
+    height: 140px;
+    background-color: #f1e4e4;
 }
