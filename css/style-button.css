@@ -1,0 +1,118 @@
+/*Обнуление*/
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+/*Стили для демонстрации*/
+html,body{
+	height: 100%;
+}
+body{
+	background-color: #f1e4e4;
+}
+.container{
+	height: 100%;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+}
+/* Основные стили */
+
+.button {
+ 	font-family: 'Comfortaa', cursive;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+}
+
+.hearth{
+	position: absolute;
+	z-index: 1;
+	width: 170px;
+	top: -43px;
+	left: 59px;
+	transition: all 0.8s ease 0s;
+}
+#first{
+	animation: rotate 17s infinite linear;
+}
+#second{
+	animation: rotate 25s infinite linear;
+}
+
+.button-text {
+	position: relative;
+	height: 80px;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	padding: 0px 50px;
+	border-radius: 5px;
+	font-size: 24px;
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.3);
+	letter-spacing: 5px;
+	transition: all 1s ease 0s;
+	top: 0;
+	overflow: hidden;
+}
+.button-text:before,
+.button-text:after{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: #eee;
+	transition: all 0.8s ease 0s;
+}
+.button-text:before{
+	left: 0;
+	z-index: 2;
+}
+.button-text:after{
+	right: 0;
+}
+.button-text span{
+	position: relative;
+	z-index: 2;
+}
+
+
+.button:hover .hearth{
+	left: 100%;
+	opacity: 0;
+}
+
+.button:hover .button-text{
+	top: -10px;
+	color: #fff;
+	transition: all 0.5s ease 0.2s;
+	box-shadow: 0 5px 0px 0 #0c5b52;
+}
+
+.button:hover .button-text:before,
+.button:hover .button-text:after{
+	background-color: #18b5a4;
+}
+
+.button:hover .button-text:before{
+	width: 100%;
+}
+
+.button:active .button-text{
+	top: -7px;
+	transition: all 0.1s ease 0s;
+	box-shadow: 0 2px 0px 0 #0c5b52;
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
