@@ -1,3 +1,6 @@
+window.onunload = function () {
+	window.scrollTo(0, 0);
+}
 let w = window.outerWidth;
 let h = document.querySelector('.content').clientHeight;
 let h_b = document.querySelector('.parallax').clientHeight;
@@ -12,18 +15,24 @@ async function sha256(message) {
 	return hashHex;
 }
 
-
+function wakeHerokuUp(){
+	fetch('https://get-text-flask.herokuapp.com/get-text', {
+		method: 'GET',
+	}).then((response)=>{
+		console.log('Heroku have woken up');
+	})
+}
+wakeHerokuUp();
 document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', function () {
 		//console.log(window.outerWidth+ " "+ window.outerHeight);
 		let s = window.pageYOffset;
-
 		let p = s / h * 100;
 		let p_b = s / h_b * 100;
 		let o = 1 - 1 / 100 * p_b;
 
 		label.style.left = (labelStartPositionX + Math.pow(s / 100, 3)) + 'px';
-		console.log(s);
+		//console.log(s);
 
 		let z_1 = 1 + (w / 10000 * p_b);
 		document.querySelector('.parallax__snowfall-first').style.transform = `scale(${z_1})`;
@@ -72,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				if (x.readyState == 4 && x.status == 200) {
 					if (x.response['ok']){
 						localStorage.setItem('data', x.response['data']);
-						document.location.replace('message.html');
+						document.location.href = 'message.html';
 					} else {
 						console.log('Невірний пароль');
 					}

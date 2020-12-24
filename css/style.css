@@ -206,7 +206,7 @@ body{
     font-size: 18px;
     text-align: justify;
     position: relative;
-    border-radius: 0 5px 0 0;
+    border-radius: 0 15px 0 0;
 }
 .content__article::before{
     content: url(../img/compressed/hat.png);
@@ -265,6 +265,7 @@ body{
     }
 }
 
+
 .image{
     max-width: 300px;
     position: relative;
@@ -302,6 +303,8 @@ body{
     transform: rotate(4deg);
 }
 
+
+
 .content__form{
     display: flex;
     justify-content: center;
@@ -328,12 +331,34 @@ body{
     transition: all 1s;
 }
 .content__form button:hover{
-    transform: rotate(720deg);
+    transform: rotate(1080deg);
     color: black;    
 }
+
 
 
 footer{
     height: 140px;
     background-color: #f1e4e4;
+}
+
+.footer__container{
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.footer__info{
+    color: black;
+    position: relative;
+    z-index: 3;
+    
+}
+.footer__info p:first-child{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer__info p:nth-child(2){
+    margin-bottom: 8px;
 }
