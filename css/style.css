@@ -142,7 +142,7 @@ body{
     background: url('../img/compressed/snowman.png') no-repeat;
     background-size: 25%;
     background-position: 90% 100%;
-    z-index: 1;
+    z-index: 3;
 }
 
 .parallax__snowfall-first {
@@ -177,17 +177,21 @@ body{
     }
 }
 
+
+
 .flex-grid{
     display: flex;
+    margin-bottom: 35px;
 }
-.col{
-    flex-grow: 1;
+.col-2{
+    flex: 1 0 60%;
+    margin-right: 30px;
 }
-@media (max-width: 400px){
-    .flex-grid{
-        display: block;
-    }
+.col-1{
+    flex: 1 1 100px;
 }
+
+
 
 
 .content {
@@ -198,6 +202,15 @@ body{
     max-width: 1170px;
     margin: 0px auto;
 }
+
+.content__title{
+    text-align: center;
+    font-size: 40px;
+    height: 60px;
+    
+}
+
+
 .content__article, .content__article-message {
     padding: 25px;
     padding-top: 70px;
@@ -223,14 +236,18 @@ body{
  */
 .content__article p, .content__article-message p{
     margin-bottom: 40px;
+    text-indent: 40px;
 }
 
 
 @media (max-width:767px){
+    .content__title{
+        font-size: 28px;
+    }
 	.content__article{
 		font-size: 14px;
 		line-height: 20px;
-	}
+    }
 	.content__article p{
 		margin: 0px 0px 10px 0px;
     }
@@ -248,6 +265,9 @@ body{
     }
 }
 @media (max-width:400px){
+    .content__title{
+        font-size: 25px;
+    }
     .parallax__tree{
         background-size: 70%;
         background-position-x: -80%;
@@ -263,12 +283,16 @@ body{
     .parallax__snow-main{
 
     }
+    .flex-grid{
+        display: block;
+    }
 }
 
 
 .image{
-    max-width: 300px;
+    max-width: 100%;
     position: relative;
+    
 }
 
 .image img{
@@ -291,18 +315,21 @@ body{
     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
 }
 .image::before {
-    background: lightskyblue;
+    background: rgb(134, 143, 173);
     top: 0px;
     left: -10px;
     transform: rotate(-5deg);
 }
 .image::after {
-    background: lightskyblue;
+    background: rgb(134, 143, 173);
     top: 5px;
     left: 0px;
     transform: rotate(4deg);
 }
 
+#im2{
+    transform: rotate(-13deg);
+}
 
 
 .content__form{
