@@ -183,12 +183,16 @@ body{
     display: flex;
     margin-bottom: 35px;
 }
-.col-2{
+.col-text{
     flex: 1 0 60%;
-    margin-right: 30px;
+    margin-right: 25px;
 }
-.col-1{
-    flex: 1 1 100px;
+.col-image{
+    flex: 1 1 150px;
+}
+
+.turned{
+    margin: 0px 0px 0px 25px;
 }
 
 
@@ -240,53 +244,6 @@ body{
 }
 
 
-@media (max-width:767px){
-    .content__title{
-        font-size: 28px;
-    }
-	.content__article{
-		font-size: 14px;
-		line-height: 20px;
-    }
-	.content__article p{
-		margin: 0px 0px 10px 0px;
-    }
-    .parallax__tree{
-        background-size: 35%;
-    }
-    .parallax__gift{
-        background-position: 40% 98%;
-    }
-    .parallax__snowman{
-        background-size: 35%;
-    }
-    .parallax__snow-main{
-
-    }
-}
-@media (max-width:400px){
-    .content__title{
-        font-size: 25px;
-    }
-    .parallax__tree{
-        background-size: 70%;
-        background-position-x: -80%;
-    }
-    .parallax__gift{
-        background-size: 15%;
-        background-position: 50% 98%;
-    }
-    .parallax__snowman{
-        background-size: 50%;
-        background-position-x: 130%;
-    }
-    .parallax__snow-main{
-
-    }
-    .flex-grid{
-        display: block;
-    }
-}
 
 
 .image{
@@ -335,6 +292,8 @@ body{
 .content__form{
     display: flex;
     justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
 .content__form form{
     height: 40px;
@@ -361,7 +320,13 @@ body{
     transform: rotate(1080deg);
     color: black;    
 }
-
+.incorrect-password{
+    position: relative;
+    font-size: 13px;
+    color: gray;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
 
 
 footer{
@@ -388,4 +353,70 @@ footer{
 }
 .footer__info p:nth-child(2){
     margin-bottom: 8px;
+}
+
+@media (max-width:900px){
+    .content__article p{
+        margin-bottom: 0px;
+        text-indent: 40px;
+    }
+}
+
+
+@media (max-width:767px){
+    .content__title{
+        font-size: 28px;
+    }
+	.content__article{
+		font-size: 14px;
+		line-height: 20px;
+    }
+	.content__article p{
+		margin: 0px 0px 10px 0px;
+    }
+    .parallax__tree{
+        background-size: 35%;
+    }
+    .parallax__gift{
+        background-position: 40% 98%;
+    }
+    .parallax__snowman{
+        background-size: 35%;
+    }
+    .parallax__snow-main{
+
+    }
+}
+@media (max-width:400px){
+    .content__title{
+        font-size: 25px;
+    }
+    .parallax__tree{
+        background-size: 70%;
+        background-position-x: -80%;
+    }
+    .parallax__gift{
+        background-size: 15%;
+        background-position: 50% 98%;
+    }
+    .parallax__snowman{
+        background-size: 50%;
+        background-position-x: 130%;
+    }
+    .parallax__snow-main{
+
+    }
+    .flex-grid{
+        display: block;
+    }
+    .col-text{
+        margin: unset;
+    }
+    .turned{
+        margin: unset;
+    }
+    .image{
+        max-width: 80%;
+        margin: 0 auto;
+    }
 }

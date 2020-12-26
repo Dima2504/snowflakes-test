@@ -83,7 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
 						localStorage.setItem('data', x.response['data']);
 						document.location.href = 'message.html';
 					} else {
-						console.log('Невірний пароль');
+						document.querySelector('.incorrect-password').style.opacity = '1';
+						setTimeout(()=>{
+							document.querySelector('.incorrect-password').style.opacity = '0';
+						}, 3000);
 					}
 				}
 			}
