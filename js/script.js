@@ -22,6 +22,14 @@ function wakeHerokuUp(){
 		console.log('Heroku have woken up');
 	})
 }
+function anim(){
+	for(let e of document.querySelectorAll('.anim-item')){
+		if (e.getBoundingClientRect().y+250<= window.screen.height){
+			e.classList.add('_active');
+		}
+	}
+}
+
 wakeHerokuUp();
 document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', function () {
@@ -32,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		let o = 1 - 1 / 100 * p_b;
 
 		label.style.left = (labelStartPositionX + Math.pow(s / 100, 3)) + 'px';
-		//console.log(s);
 
 		let z_1 = 1 + (w / 10000 * p_b);
 		document.querySelector('.parallax__snowfall-first').style.transform = `scale(${z_1})`;
@@ -65,6 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		// let hr_5 = w / 1500 * p_b;
 		//let z_7 = 1 + (w * 0.00001 * p_b); 
 		document.querySelector('.parallax__snowman').style.transform = `translate3d(${hr}px,0,0) scale(${z_1})`;
+		anim();
+
 	});
 	let form = document.querySelector('.password-form');
 
